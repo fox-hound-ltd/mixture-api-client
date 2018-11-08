@@ -24,7 +24,7 @@ PHP Client for [GraphQL](http://graphql.org/) & REST
 [Composer](https://getcomposer.org/)を利用
 
 ```
-composer require fox-hound-ltd/mixture-api-client
+$ composer require fox-hound-ltd/mixture-api-client
 ```
 
 利用方法サンプル
@@ -102,7 +102,7 @@ $response = $client->query($query, $variables);
 -------
 
 ``` bash
-$ comooser test
+$ composer test
 ```
 
 ライセンス
