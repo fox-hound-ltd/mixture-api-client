@@ -41,21 +41,13 @@ $client = ClientBuilder::build(
 );
 
 $query = <<<'QUERY'
-query GetHoge($target_id: ID, $member_name: String) {
-  foo(id: $target_id) {
-    id_foo
-    bar (id: $idBar) {
-      id_bar
-    }
-  }
+query foo(id: 11){
+　id
+　name
 }
 QUERY;
 
-$variables = [
-    'target_id' => 11,
-    'member_name' => 'bar',
-];
-$response = $client->query($query, $variables);
+$response = $client->query($query);
 ```
 
 JsonWebTokenを利用する場合
@@ -84,7 +76,7 @@ $query = <<<'QUERY'
 query GetHoge($target_id: ID, $member_name: String) {
   foo(id: $target_id) {
     id_foo
-    bar (id: $idBar) {
+    bar (name: $member_name) {
       id_bar
     }
   }
