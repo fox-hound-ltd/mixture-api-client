@@ -22,7 +22,7 @@ build:
             tests:
                 override:
                 -
-                    command: phpdbg -qrr app/vendor/bin/phpunit --coverage-clover coverage/clover.xml
+                    command: phpdbg -qrr vendor/bin/phpunit --coverage-clover coverage/clover.xml
                     coverage:
                         file: coverage/clover.xml
                         format: clover
