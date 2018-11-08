@@ -1,0 +1,38 @@
+{
+  "name": "fox-hound-ltd/mixture-api-client",
+  "type": "library",
+  "description" : "GraphQL & REST API Client",
+  "keywords": ["graphql", "jwt", "rest", "client"],
+  "authors": [
+    {
+      "name": "fox-daiki-yamamoto",
+      "email": "daiki.yamamoto@fox-hound.co.jp"
+    }
+  ],
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=7.0",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.0",
+    "squizlabs/php_codesniffer": "^3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "MixtureApiClient\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "HybridApiClient\\Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit --coverage-text; phpcs --report=code .;",
+    "phpunit": "phpunit --coverage-text",
+    "coverage": "phpdbg -qrr vendor/bin/phpunit --coverage-html coverage $@",
+    "phpcs": "phpcs --report=code .",
+    "phpcbf": "phpcbf ."
+  }
+}

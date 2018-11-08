@@ -1,0 +1,10 @@
+.DS_Store
+
+# IDE
+.vscode
+.idea
+
+/vendor/
+composer.lock
+/coverage/
+coverage.clover
