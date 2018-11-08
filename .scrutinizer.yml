@@ -16,15 +16,16 @@ build:
     nodes:
         analysis:
             tests:
-                override: [php-scrutinizer-run]
-
-    tests:
-        override:
-        -
-            command: phpdbg -qrr vendor/bin/phpunit --coverage-clover coverage/clover.xml
-            coverage:
-                file: coverage/clover.xml
-                format: clover
+                override:
+                - php-scrutinizer-run
+        test-and-coverage:
+            tests:
+                override:
+                -
+                    command: phpdbg -qrr app/vendor/bin/phpunit --coverage-clover coverage/clover.xml
+                    coverage:
+                        file: coverage/clover.xml
+                        format: clover
 
 filter:
     paths: [src/*]
